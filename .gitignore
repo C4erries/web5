@@ -1,0 +1,7 @@
+/node_modules/
+/tailwind.config.js
+/package.json
+/package-lock.json
+/.idea/modules.xml
+/.idea/web5.iml
+/.idea/vcs.xml

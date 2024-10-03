@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CalcME</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./calc.js" defer></script>
+</head>
+<body class="grid grid-cols-8  bg-emerald-100">
+<div class="mt-12 p-6 bg-amber-100
+        grid grid-rows-2 grid-cols-6
+        col-span-6 md:col-span-4
+        col-start-2 md:col-start-3
+        justify-center items-center">
+    <div class="col-start-2 md:col-start-3 col-span-4 md:col-span-2 flex flex-col">
+        <form class="flex flex-col">
+            <label class="text-center flex flex-col">
+                 Количество
+                 <input id="quantityInput" class="my-1" type="text"/>
+            </label>
+            <label class="text-center flex flex-col">
+                Тип напитка
+          <select id="productSelect" class="my-1">
+            <option value="espresso">espresso</option>
+            <option value="cappuccino">cappuccino</option>
+            <option value="latte">latte</option>
+          </select>
+            </label>
+        </form>
+        <button id="button-submit" class="hover:bg-fuchsia-300 active:bg-fuchsia-100 bg-fuchsia-400">Calculate</button>
+    </div>
+    <div id="answerDiv" class="row-start-2 col-span-6 mt-2 justify-center text-center"></div>
+</div>
+</body>
+</html>
