@@ -9,15 +9,16 @@
 </head>
 <body class="grid grid-cols-8  bg-emerald-100">
 <div class="mt-12 p-6 bg-amber-100
-        grid grid-rows-2 grid-cols-6
+        grid grid-rows-3 grid-cols-6
         col-span-6 md:col-span-4
         col-start-2 md:col-start-3
+
         justify-center items-center">
-    <div class="col-start-2 md:col-start-3 col-span-4 md:col-span-2 flex flex-col">
+    <div class="col-start-2 lg:col-start-3 col-span-4 lg:col-span-2 flex flex-col">
         <form class="flex flex-col">
             <label class="text-center flex flex-col">
                  Количество
-                 <input id="quantityInput" class="my-1" type="text"/>
+                 <input id="quantityInput" class="px-1 my-1" type="number"/>
             </label>
             <label class="text-center flex flex-col">
                 Тип напитка
@@ -30,7 +31,31 @@
         </form>
         <button id="button-submit" class="hover:bg-fuchsia-300 active:bg-fuchsia-100 bg-fuchsia-400">Calculate</button>
     </div>
-    <div id="answerDiv" class="row-start-2 col-span-6 mt-2 justify-center text-center"></div>
+    <div class="flex row-start-2 col-span-6 justify-center">
+        <div id="answerDiv" class="px-5 text-center bg-orange-200"></div>
+    </div>
+    <table class="row-start-3 md:col-start-2 col-span-6 md:col-span-4 flex-shrink-0 text-center max-[400px]:text-xs" id="table">
+    <tr class="grid grid-cols-3 row-start-1">
+        <th>Напиток</th>
+        <th>Ожидание</th>
+        <th>Стоимость</th>
+    </tr>
+    <tr class="grid grid-cols-3 row-start-1">
+        <td>Эспрессо</td>
+        <td>3 мин</td>
+        <td>110</td>
+    </tr>
+    <tr class="grid grid-cols-3 row-start-1">
+        <td>Капучино</td>
+        <td>10 мин</td>
+        <td>150</td>
+    </tr>
+    <tr class="grid grid-cols-3 row-start-1">
+        <td>Латте</td>
+        <td>12 мин</td>
+        <td>180</td>
+    </tr>
+    </table>
 </div>
 </body>
 </html>
