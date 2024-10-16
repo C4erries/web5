@@ -9,7 +9,7 @@
 </head>
 <body class="grid grid-cols-8  bg-emerald-100">
 <div class="mt-12 p-6 bg-amber-100
-        grid grid-rows-3 grid-cols-6
+        grid grid-rows-2 grid-cols-6
         col-span-6 md:col-span-4
         col-start-2 md:col-start-3
 
@@ -22,19 +22,35 @@
             </label>
             <label class="text-center flex flex-col">
                 Тип напитка
-          <select id="productSelect" class="my-1">
-            <option value="espresso">espresso</option>
-            <option value="cappuccino">cappuccino</option>
-            <option value="latte">latte</option>
-          </select>
+                <label>
+                    Эспрессо
+                    <input value="espresso" name="radio-type" type="radio">
+                </label>
+                <label>
+                    Капучино
+                    <input value="cappuccino" name="radio-type" type="radio">
+                </label>
+                <label>
+                    Латте
+                    <input value="latte" name="radio-type" type="radio">
+                </label>
+            </label>
+            <label class="flex flex-col items-center">
+                <label class="hidden flex-col items-center" for="syrupSelect">
+                    Сироп
+                <select id="syrupSelect" multiple>
+                    <option value="saltCaramel">Соленая Карамель</option>
+                    <option value="pumpkin">Тыква</option>
+                    <option value="vanilla">Ваниль</option>
+                    <option value="banana">Банан</option>
+                </select>
+                </label>
+                <label class="hidden items-center text-center justify-center content-center justify-content-center">Альтернативное молоко<input id="milkBox" value="milk" type="checkbox"></label>
             </label>
         </form>
-        <button id="button-submit" class="hover:bg-fuchsia-300 active:bg-fuchsia-100 bg-fuchsia-400">Calculate</button>
-    </div>
-    <div class="flex row-start-2 col-span-6 justify-center">
         <div id="answerDiv" class="px-5 text-center bg-orange-200"></div>
     </div>
-    <table class="row-start-3 md:col-start-2 col-span-6 md:col-span-4 flex-shrink-0 text-center max-[400px]:text-xs" id="table">
+    <table class="row-start-2 md:col-start-2 col-span-6 md:col-span-4 flex-shrink-0 text-center max-[400px]:text-xs" id="table">
     <tr class="grid grid-cols-3 row-start-1">
         <th>Напиток</th>
         <th>Ожидание</th>
