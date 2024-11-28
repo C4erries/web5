@@ -99,4 +99,11 @@ li > a:only-child:after {
   content: "";
 }
 
+.slick-dots > li {
+  display: none;
+}
+.slick-dots > .slick-active {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */

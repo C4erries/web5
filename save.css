@@ -417,7 +417,6 @@ body {
 #block-tariffs {
   padding: 160px 0 90px;
   font-family: Montserrat, sans-serif;
-  background: url(/themes/custom/bootstrap_dc/css/../images/D-bg-opacity.svg) no-repeat right top, #fff;
   background-size: 58%;
 }
 #block-tariffs .block-title {
@@ -491,7 +490,6 @@ body {
   left: 0;
   width: 13px;
   height: 10px;
-  background: url(/themes/custom/bootstrap_dc/css/../images/checkmark.svg) no-repeat center;
   background-size: contain;
 }
 
@@ -700,7 +698,7 @@ body {
 }
 
 footer {
-  background: linear-gradient(254.72deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), url("/themes/custom/bootstrap_dc/css/../images/D-flying.svg") no-repeat top center, url("/themes/custom/bootstrap_dc/css/../images/D-footer.svg") no-repeat bottom right, #040613;
+  background: linear-gradient(254.72deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), no-repeat top center, no-repeat bottom right, #040613;
   padding: 117px 0 54px;
   color: #fff;
   font-family: Montserrat, sans-serif;
@@ -771,7 +769,6 @@ footer {
   display: block;
   width: 18px;
   height: 18px;
-  background: url(/themes/custom/bootstrap_dc/css/../images/phone.svg) no-repeat center;
   background-size: contain;
   position: absolute;
   left: 3px;
@@ -788,7 +785,6 @@ footer {
   display: block;
   width: 24px;
   height: 18px;
-  background: url(/themes/custom/bootstrap_dc/css/../images/mail.svg) no-repeat center;
   background-size: contain;
   position: absolute;
   left: 0;
@@ -864,7 +860,6 @@ footer {
   display: block;
   width: 21px;
   height: 21px;
-  background: url("/themes/custom/bootstrap_dc/css/../images/checked-icon.svg") no-repeat center;
   background-size: contain;
   transition: opacity 0.2s, transform 0.4s;
   transform: rotateZ(-30deg);
@@ -953,7 +948,6 @@ footer {
   position: absolute;
   width: 115px;
   height: 70px;
-  background: url(/themes/custom/bootstrap_dc/css/../images/icon-bg.svg) no-repeat center;
   background-size: contain;
   left: -54px;
   bottom: -4px;
@@ -1048,7 +1042,6 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(/themes/custom/bootstrap_dc/css/../images/drupal-logo-2.svg) no-repeat right bottom;
   background-size: contain;
   z-index: 10;
 }
@@ -1204,7 +1197,6 @@ footer {
   margin-bottom: 160px;
   font-family: Montserrat, sans-serif;
   font-style: normal;
-  background: url(/themes/custom/bootstrap_dc/css/../images/right-quote-sign.svg) no-repeat left top;
   background-size: 26%;
   padding-top: 90px;
 }
@@ -1215,6 +1207,9 @@ footer {
   margin-top: 0;
   text-align: center;
   color: #050c33;
+}
+#block-views-block-testimonials-block-1 .slick-review-counter {
+  font-family: Monospaced, sans-serif;
 }
 #block-views-block-testimonials-block-1 .view-content {
   width: 980px;
@@ -1257,7 +1252,6 @@ footer {
 }
 #block-views-block-testimonials-block-1 .slick {
   display: flex;
-  flex-wrap: wrap;
   position: relative;
   z-index: 10;
   background: #fff;
@@ -1265,7 +1259,6 @@ footer {
   box-sizing: border-box;
   box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
   border-radius: 5px;
-  padding: 66px 0 66px 68px;
 }
 #block-views-block-testimonials-block-1 .slick:after {
   content: "";
@@ -1278,7 +1271,6 @@ footer {
 #block-views-block-testimonials-block-1 .slick-slider {
   width: 64%;
   float: left;
-  padding-right: 60px;
   border-right: 1px solid #cdcdcd;
   padding: 14px 60px;
 }
@@ -1286,12 +1278,12 @@ footer {
   outline: none;
 }
 #block-views-block-testimonials-block-1 .slick__arrow {
-  width: 36%;
-  float: left;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   display: flex;
-}
-#block-views-block-testimonials-block-1 .slick__arrow-wrapper {
-  margin: auto;
+  width: 100%;
 }
 #block-views-block-testimonials-block-1 .slick-arrow {
   width: 16px;
@@ -1302,11 +1294,11 @@ footer {
   outline: none;
 }
 #block-views-block-testimonials-block-1 .slick-arrow.slick-prev {
-  background: url("/themes/custom/bootstrap_dc/css/../images/arrow-left.svg") no-repeat center;
+  background: url("/src/arrow-left.svg") no-repeat center;
   background-size: contain;
 }
 #block-views-block-testimonials-block-1 .slick-arrow.slick-next {
-  background: url("/themes/custom/bootstrap_dc/css/../images/arrow-right.svg") no-repeat center;
+  background: url("/src/arrow-right.svg") no-repeat center;
   background-size: contain;
 }
 #block-views-block-testimonials-block-1 .slick-slide-num {
@@ -1650,7 +1642,7 @@ footer {
     border-top: 1px solid #cdcdcd;
   }
   #block-views-block-testimonials-block-1 .slick__arrow-wrapper {
-    display: inline-block;
+    display: flex;
   }
   .view:not(.inverse) .blog.keys-1:nth-of-type(4n+1) .keys-1__picture {
     height: 140px;
@@ -1814,6 +1806,125 @@ a, button {
 
 .view-testimonials .slick-track {
   display: flex;
+}
+
+.panel-group {
+  margin-bottom: 22px;
+}
+
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 5px;
+}
+
+.panel-group .panel-heading {
+  border-bottom: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+  border-top: 1px solid #ddd;
+}
+
+.panel-group .panel-footer {
+  border-top: 0;
+}
+
+.panel-group .panel-footer + .panel-collapse .panel-body {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-block {
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: -45px;
+  margin-top: -48px;
+  padding: 40px 0;
+}
+
+@media (max-width: 767px) {
+  .faq-block {
+    margin-top: -17px;
+  }
+}
+.faq-block .panel-faq {
+  counter-reset: questions__item;
+  font-size: 14px;
+}
+
+.faq-block .panel-faq .panel {
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  padding: 10px 12px 10px 30px;
+  border: 3px solid transparent;
+  transition: border-color 0.35s;
+  margin: 0;
+  background: 0 0;
+}
+
+.faq-block .panel-faq .panel.panel_open {
+  transition-duration: 0.175s;
+  border-color: #f14d34;
+}
+
+.faq-block .panel-faq .panel-heading {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.faq-block .panel-faq .panel-heading .panel-title {
+  padding: 0;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.faq-block .panel-faq .panel-heading .panel-title:before {
+  content: counter(questions__item) ".";
+  counter-increment: questions__item;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 25px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 12px;
+  color: #828a9b;
+  margin-top: 4px;
+}
+
+.faq-block .panel-faq .panel .panel-body {
+  border: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #4e5a73;
+  line-height: 1.37;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.faq-block .panel-faq .panel-btn {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #f14e3b;
+  line-height: 1.22;
+  transition: color 0.3s;
+}
+
+.faq-block .panel-faq .panel_close .panel-btn {
+  color: #050c33;
+}
+
+.faq-title {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=save.css.map */
