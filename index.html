@@ -10,17 +10,129 @@
             src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="src/slick.js" defer></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="src/slick-theme.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="save.css">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://cdn.tailwindcss.com" defer></script>
 </head>
 <body>
 <header>
+<div class="navbar" id="navbar">
+    <div class="mobile-nav">
+        <img src="src/img/drupal-coder.svg" class="drup-logo" alt="drupal-logo">
+        <button class="navbar-toggle" id="navbar-toggle">
+            <div class="buttonlines">
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+            </div>
+        </button>
+    </div>
+
+    <ul class="navmenu" style="display: none" id="mobileMenu">
+        <li class="menuline"><a href="https://drupal-coding.com/support" class="menulink">ПОДДЕРЖКА DRUPAL</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/drupal-admin" class="menulink">АДМИНИСТРИРОВАНИЕ</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/import-migrate-upgrade" class="menulink innermenulink">МИГРАЦИЯ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/backup" class="menulink innermenulink">БЭКАПЫ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-security-audit" class="menulink innermenulink">АУДИТ БЕЗОПАСНОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/boost-drupal" class="menulink innermenulink">ОПТИМИЗАЦИЯ СКОРОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/ssl" class="menulink innermenulink">ПЕРЕЕЗД НА HTTPS</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОДВИЖЕНИЕ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/drupal-seo" class="menulink">РЕКЛАМА</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/team" class="menulink">О НАС</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/team#team" class="menulink innermenulink">КОМАНДА</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupalgive" class="menulink innermenulink">DRUPALGIVE</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/blog" class="menulink innermenulink">БЛОГ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-courses" class="menulink innermenulink">КУРСЫ DRUPAL</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОЕКТЫ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/contacts" class="menulink">КОНТАКТЫ</a></li>
+    </ul>
+    <ul class="navmenu"  id="desktopMenu">
+        <li class="menuline"><a href="https://drupal-coding.com/support" class="menulink">ПОДДЕРЖКА DRUPAL</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/drupal-admin" class="menulink">АДМИНИСТРИРОВАНИЕ</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/import-migrate-upgrade" class="menulink innermenulink">МИГРАЦИЯ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/backup" class="menulink innermenulink">БЭКАПЫ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-security-audit" class="menulink innermenulink">АУДИТ БЕЗОПАСНОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/boost-drupal" class="menulink innermenulink">ОПТИМИЗАЦИЯ СКОРОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/ssl" class="menulink innermenulink">ПЕРЕЕЗД НА HTTPS</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОДВИЖЕНИЕ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/drupal-seo" class="menulink">РЕКЛАМА</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/team" class="menulink">О НАС</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/team#team" class="menulink innermenulink">КОМАНДА</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupalgive" class="menulink innermenulink">DRUPALGIVE</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/blog" class="menulink innermenulink">БЛОГ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-courses" class="menulink innermenulink">КУРСЫ DRUPAL</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОЕКТЫ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/contacts" class="menulink">КОНТАКТЫ</a></li>
+    </ul>
+</div>
 </header>
     <section class="preview">
         <div class="preview-bg"><video id="bg-video" autoplay="autoplay" loop="" preload="auto" muted=""><source src="src/video.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.</video></div>
@@ -91,7 +203,7 @@
         </div>
     </section>
     <section>
-    <div class=" ftp-56"><div class="competencies">
+    <div class="ftp-56"><div class="competencies">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -352,7 +464,7 @@
                             <div class="col-sm-6 col-xs-12 expertise-col">
                                 <div class="expertise-item">
                                     <div class="expertise-item-body">
-                                        Участвуем в разработке ядра Drupal и модулей на Drupal.org. <a href="#"> разрабатываем свои модули Drupal </a>
+                                        Участвуем в разработке ядра Drupal и модулей на Drupal.org.  разрабатываем свои модули Drupal
                                     </div>
                                 </div>
                             </div>
@@ -436,13 +548,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
                     <div class="col-xs-12">
                         <div class="tariffs-ps">
                             Вам не подходят наши тарифы? Оставьте заявку и ы предложим вам индивидуальные условия!
                             <a href="#support" class="tariffs-link">Получить индивидуальный тариф</a>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -581,12 +691,12 @@
         <div class="view-content">
 
 
-            <article data-history-node-id="342" class="blog is-promoted keys-1 clear">
+            <article class="blog is-promoted keys-1 clear">
                 <div class="keys-1__wrapper">
                     <div class="keys-1__picture">
 
                         <div class=" field--name-field-blog-img field--type-image  ">    <picture>
-                           <img loading="eager" srcset="/sites/default/files/styles/blog_keys_1/public/2022-07/2225966.jpg?itok=k377E8ow 1x" width="840" height="475" src="/sites/default/files/styles/blog_keys_1/public/2022-07/2225966.jpg?itok=k377E8ow" alt="Drupal SEO" typeof="foaf:Image">
+                            <img width="840" height="475" src="src/img/article1.png" alt="Data cache" typeof="foaf:Image">
 
                         </picture>
 
@@ -598,35 +708,33 @@
                         <div class="keys-1__header">
 
                             <h2>
-                                <a href="https://drupal-coding.com/blog/improving-core-web-vitals-settings-drupal-websites" rel="bookmark">
-                                    <span>Improving Core Web Vitals settings on Drupal websites</span>
+                                <a rel="bookmark">
+                                    <span>Настройка кеширования данных. Апгрейд сервера. Ускорение работы сайта в 30 раз!</span>
                                 </a>
                             </h2>
 
                             <div class="keys-1__header-date">
-                                19.07.2022
+                                04.05.2020
                             </div>
                         </div>
 
                         <div class="keys-1__content">
 
-                            <div class=" ftp-56   "><p>Google ranks website pages based on their user-friendliness - the better the page...</p></div>
+                            <div class=" ftp-56   "><p>Влияние скорости загрузки страниц сайта на отказы и конверсии. Кейс ускорения...</p></div>
 
                         </div>
                     </div>
                 </div>
             </article>
-            <article data-history-node-id="331" about="https://drupal-coding.com/blog/google-amp-technology-drupal-websites-fast-loading-website-pages-cell-phone" class="blog is-promoted keys-2 clear">
+
+            <article class="blog is-promoted keys-2 clear">
                 <div class="keys-2__wrapper">
                     <div class="keys-2__picture">
 
-                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
-                            <source srcset="/sites/default/files/styles/blog_keys_2_tablet/public/2022-03/2809413_0.jpg.webp?itok=AXzcqYQD 700w" type="image/webp" sizes="max-width:767px" width="700" height="360">
-                            <source srcset="/sites/default/files/styles/blog_keys_2_tablet/public/2022-03/2809413_0.jpg?itok=AXzcqYQD 700w" type="image/jpeg" sizes="max-width:767px" width="700" height="360">
-                            <img loading="eager" srcset="/sites/default/files/styles/blog_keys_2_tablet/public/2022-03/2809413_0.jpg?itok=AXzcqYQD 700w" sizes="max-width:767px" width="700" height="360" src="/sites/default/files/styles/blog_keys_2/public/2022-03/2809413_0.jpg?itok=gm4Z2Z1n" alt="Google AMP on Drupal" typeof="foaf:Image">
-
-                        </picture>
-
+                        <div class=" field--name-field-blog-img field--type-image  ">
+                            <picture>
+                                <img loading="eager" sizes="max-width:767px" width="700" height="360" src="src/img/article2.jpg" alt="Ecommerce metrics" typeof="foaf:Image">
+                            </picture>
                         </div>
 
                     </div>
@@ -635,8 +743,8 @@
                         <div class="keys-2__header">
 
                             <h2>
-                                <a href="https://drupal-coding.com/blog/google-amp-technology-drupal-websites-fast-loading-website-pages-cell-phone" rel="bookmark">
-                                    <span>Google AMP technology for Drupal websites: fast loading of website pages from a cell phone</span>
+                                <a href="" rel="bookmark">
+                                    <span>Использование отчётов Ecommerce в Яндекс.Метрике</span>
                                 </a>
                             </h2>
 
@@ -649,14 +757,12 @@
                 </div></article>
 
 
-            <article data-history-node-id="330" about="https://drupal-coding.com/blog/sendpulse-integration-drupal-website" class="blog is-promoted keys-1 clear">
+            <article class="blog is-promoted keys-1 clear">
                 <div class="keys-1__wrapper">
                     <div class="keys-1__picture">
 
                         <div class=" field--name-field-blog-img field--type-image  ">    <picture>
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/Mar-Business_18_0.jpg.webp?itok=xuAeqa0I 1x" type="image/webp" width="840" height="475">
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/Mar-Business_18_0.jpg?itok=xuAeqa0I 1x" type="image/jpeg" width="840" height="475">
-                            <img loading="eager" srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/Mar-Business_18_0.jpg?itok=xuAeqa0I 1x" width="840" height="475" src="/sites/default/files/styles/blog_keys_1/public/2022-03/Mar-Business_18_0.jpg?itok=xuAeqa0I" alt="Mar-Business" typeof="foaf:Image">
+                            <img loading="eager" width="840" height="475" src="src/img/article3.png" alt="Conversion Improvement" typeof="foaf:Image">
 
                         </picture>
 
@@ -668,19 +774,50 @@
                         <div class="keys-1__header">
 
                             <h2>
-                                <a href="https://drupal-coding.com/blog/sendpulse-integration-drupal-website" rel="bookmark">
-                                    <span>SendPulse integration with Drupal website</span>
+                                <a href="" rel="bookmark">
+                                    <span>Повышение конверсии страницы с формой заявки с применением AB-тестирования</span>
                                 </a>
                             </h2>
 
                             <div class="keys-1__header-date">
-                                18.03.2022
+                                24.01.2020
                             </div>
                         </div>
 
                         <div class="keys-1__content">
 
-                            <div class=" ftp-56   "><p>E-mail newsletters help bring customers back to the site, encourage them to make...</p></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog is-promoted keys-1 clear">
+                <div class="keys-1__wrapper">
+                    <div class="keys-1__picture">
+
+                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
+                            <img loading="eager" width="840" height="475" src="src/img/article4.jpg" alt="Drupal 7 acceleration" typeof="foaf:Image">
+                        </picture>
+
+                        </div>
+
+                    </div>
+
+                    <div class="keys-1__container">
+                        <div class="keys-1__header">
+
+                            <h2>
+                                <a href="" rel="bookmark">
+                                    <span>Drupal 7: ускорение времени генерации страниц интернет-магазина на 32%</span>
+                                </a>
+                            </h2>
+
+                            <div class="keys-1__header-date">
+                                23.09.2019
+                            </div>
+                        </div>
+
+                        <div class="keys-1__content">
 
                         </div>
                     </div>
@@ -688,14 +825,12 @@
             </article>
 
 
-            <article data-history-node-id="329" about="https://drupal-coding.com/blog/seo-promotion-online-stores-drupal-we-have-created-module-turns-properties-products-meaningful" class="blog is-promoted keys-1 clear">
+            <article class="blog is-promoted keys-1 clear">
                 <div class="keys-1__wrapper">
                     <div class="keys-1__picture">
 
                         <div class=" field--name-field-blog-img field--type-image  ">    <picture>
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/55896_0.jpg.webp?itok=NpZfXHgy 1x" type="image/webp" width="840" height="475">
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/55896_0.jpg?itok=NpZfXHgy 1x" type="image/jpeg" width="840" height="475">
-                            <img loading="eager" srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/55896_0.jpg?itok=NpZfXHgy 1x" width="840" height="475" src="/sites/default/files/styles/blog_keys_1/public/2022-03/55896_0.jpg?itok=NpZfXHgy" alt="SEO on drupal" typeof="foaf:Image">
+                            <img loading="eager" width="840" height="475" src="src/img/article5.png" alt="business-online" typeof="foaf:Image">
 
                         </picture>
 
@@ -707,128 +842,19 @@
                         <div class="keys-1__header">
 
                             <h2>
-                                <a href="https://drupal-coding.com/blog/seo-promotion-online-stores-drupal-we-have-created-module-turns-properties-products-meaningful" rel="bookmark">
-                                    <span>SEO promotion of online stores on Drupal: we have created a module that turns the properties of products into meaningful titles</span>
+                                <a href="" rel="bookmark">
+                                    <span>Обмен товарами и заказами интернет-магазинов на Drupal 7 с 1С: Предприятие, МойСклад, Класс365</span>
                                 </a>
                             </h2>
 
                             <div class="keys-1__header-date">
-                                18.03.2022
+                                22.08.2019
                             </div>
                         </div>
 
                         <div class="keys-1__content">
 
-                            <div class=" ftp-56   "><p>Today <a href="https://www.initlab.com/">we're</a> going to talk about a module...</p></div>
-
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article data-history-node-id="328" about="https://drupal-coding.com/blog/integration-payment-system-site-drupal" class="blog is-promoted keys-1 clear">
-                <div class="keys-1__wrapper">
-                    <div class="keys-1__picture">
-
-                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/business-online-shopping-and-sale-concept_0.jpg.webp?itok=qEhCj_X5 1x" type="image/webp" width="840" height="475">
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/business-online-shopping-and-sale-concept_0.jpg?itok=qEhCj_X5 1x" type="image/jpeg" width="840" height="475">
-                            <img loading="eager" srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/business-online-shopping-and-sale-concept_0.jpg?itok=qEhCj_X5 1x" width="840" height="475" src="/sites/default/files/styles/blog_keys_1/public/2022-03/business-online-shopping-and-sale-concept_0.jpg?itok=qEhCj_X5" alt="business-online" typeof="foaf:Image">
-
-                        </picture>
-
-                        </div>
-
-                    </div>
-
-                    <div class="keys-1__container">
-                        <div class="keys-1__header">
-
-                            <h2>
-                                <a href="https://drupal-coding.com/blog/integration-payment-system-site-drupal" rel="bookmark">
-                                    <span>Integration of the payment system with the site on Drupal</span>
-                                </a>
-                            </h2>
-
-                            <div class="keys-1__header-date">
-                                17.03.2022
-                            </div>
-                        </div>
-
-                        <div class="keys-1__content">
-
-                            <div class=" ftp-56   "><p>To receive payments from customers for goods and services, you need to connect a...</p></div>
-
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article data-history-node-id="325" about="https://drupal-coding.com/blog/increasing-traffic-not-limit-how-we-improved-clients-website-after-successful-seo-optimisation" class="blog is-promoted keys-2 clear">
-                <div class="keys-2__wrapper">
-                    <div class="keys-2__picture">
-
-                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
-                            <source srcset="/sites/default/files/styles/blog_keys_2_tablet/public/2022-03/analytics-plan-strategy-insight-concept_1.jpg.webp?itok=C_LoJXxc 700w" type="image/webp" sizes="max-width:767px" width="700" height="360">
-                            <source srcset="/sites/default/files/styles/blog_keys_2_tablet/public/2022-03/analytics-plan-strategy-insight-concept_1.jpg?itok=C_LoJXxc 700w" type="image/jpeg" sizes="max-width:767px" width="700" height="360">
-                            <img loading="eager" srcset="/sites/default/files/styles/blog_keys_2_tablet/public/2022-03/analytics-plan-strategy-insight-concept_1.jpg?itok=C_LoJXxc 700w" sizes="max-width:767px" width="700" height="360" src="/sites/default/files/styles/blog_keys_2/public/2022-03/analytics-plan-strategy-insight-concept_1.jpg?itok=99MDpH-X" alt="analitic" typeof="foaf:Image">
-
-                        </picture>
-
-                        </div>
-
-                    </div>
-
-                    <div class="keys-2__container">
-                        <div class="keys-2__header">
-
-                            <h2>
-                                <a href="https://drupal-coding.com/blog/increasing-traffic-not-limit-how-we-improved-clients-website-after-successful-seo-optimisation" rel="bookmark">
-                                    <span>Increasing traffic is not the limit: how we improved a client's website after successful SEO optimisation</span>
-                                </a>
-                            </h2>
-
-                        </div>
-
-                        <div class="keys-2__content">
-
-                        </div>
-                    </div>
-                </div></article>
-
-
-            <article data-history-node-id="324" about="https://drupal-coding.com/blog/moving-self-written-site-drupal-migrating-tens-thousands-users-and-tons-content-upgrade-future" class="blog is-promoted keys-1 clear">
-                <div class="keys-1__wrapper">
-                    <div class="keys-1__picture">
-
-                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/moving%20site.jpg.webp?itok=yHL1Lywu 1x" type="image/webp" width="840" height="475">
-                            <source srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/moving%20site.jpg?itok=yHL1Lywu 1x" type="image/jpeg" width="840" height="475">
-                            <img loading="eager" srcset="/sites/default/files/styles/blog_keys_1/public/2022-03/moving%20site.jpg?itok=yHL1Lywu 1x" width="840" height="475" src="/sites/default/files/styles/blog_keys_1/public/2022-03/moving%20site.jpg?itok=yHL1Lywu" alt="moving site" typeof="foaf:Image">
-
-                        </picture>
-
-                        </div>
-
-                    </div>
-
-                    <div class="keys-1__container">
-                        <div class="keys-1__header">
-
-                            <h2>
-                                <a href="https://drupal-coding.com/blog/moving-self-written-site-drupal-migrating-tens-thousands-users-and-tons-content-upgrade-future" rel="bookmark">
-                                    <span>Moving from a self-written site to Drupal: migrating tens of thousands of users and tons of content. Upgrade future functionality without huge development costs.</span>
-                                </a>
-                            </h2>
-
-                            <div class="keys-1__header-date">
-                                14.03.2022
-                            </div>
-                        </div>
-
-                        <div class="keys-1__content">
-
-                            <div class=" ftp-56   "><p>In this article <a href="https://www.initlab.com/">we'll</a> tell you about how...</p></div>
+                            <div class=" ftp-56   "><p>Опубликован релиз модуля...</p></div>
 
                         </div>
                     </div>
@@ -845,10 +871,7 @@
 
     <h2 class="block-title">Отзывы</h2>
 
-
     <div class="form-group"><div class="container view view-testimonials view-id-testimonials view-display-id-block_1">
-
-
 
         <div class="view-content" >
             <div class="slick">
@@ -922,7 +945,7 @@
             </div>
             <nav role="navigation" class="slick__arrow">
                 <button type="button" class="review-arrow-prev slick-prev slick-arrow" aria-label="Previous" style="">Previous</button>
-                <span class="slick-slide-num"><span class="slick-review-counter">01/ </span></span>
+                <span class="slick-review-total"><span class="slick-review-counter">01/ </span></span>
                 <button type="button" class="review-arrow-next slick-next slick-arrow" aria-label="Next" style="">Next</button>
             </nav>
         </div>
@@ -937,7 +960,7 @@
     <h2 class="block-title">С нами работают</h2>
 
 
-        <div class="form-group"><div class="view view-our-clients view-id-our_clients view-display-id-block_1 js-view-dom-id-a7476dac07a56b30550ff6b9f418a6686175e68444fd7f2b6abc2510f807e7d1">
+        <div class="form-group"><div class="view view-our-clients ">
 
 
             <div class="view-header">
@@ -947,17 +970,24 @@
 
             <div class="view-content">
 
-                <div class="slick blazy slick--view slick--view--our-clients slick--view--our-clients--block-1 slick--view--our-clients-block-block-1 slick--optionset--our-clients-logo slick--multiple-view is-blazy slick--initialized" data-blazy="" data-once="blazy slick">
-                    <div id="slick-44d972b9c11" data-slick="{&quot;count&quot;:12,&quot;total&quot;:12,&quot;mobileFirst&quot;:false,&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:false,&quot;arrows&quot;:false,&quot;centerPadding&quot;:&quot;10%&quot;,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;slidesToShow&quot;:5,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1024,&quot;settings&quot;:{&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:false,&quot;arrows&quot;:false,&quot;centerPadding&quot;:&quot;10%&quot;,&quot;slidesToShow&quot;:3,&quot;waitForAnimate&quot;:false}},{&quot;breakpoint&quot;:600,&quot;settings&quot;:{&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:false,&quot;arrows&quot;:false,&quot;centerPadding&quot;:&quot;10%&quot;,&quot;slidesToShow&quot;:2,&quot;waitForAnimate&quot;:false}}]}" class="slick__slider slick-initialized slick-slider">
-                        <div aria-live="polite" class="slick-list draggable" style="padding: 0px 10%;"><div class="slick-track" style="opacity: 1; width: 7680px; transform: translate3d(-3200px, 0px, 0px);" role="listbox"><div class="slick__slide slide slide--6 slick-slide slick-cloned" data-slick-index="-6" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
-                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="src/img/kubsu.jpeg" alt="japantravel.ru" typeof="foaf:Image">
-                        </picture>
+                <div  class="slick" data-blazy="" data-once="blazy slick">
 
-                        </div><div class="slick__slide slide slide--1 slick-slide" data-slick-index="1" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide21">    <picture>
-                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ciel parfum" typeof="foaf:Image">
-                        </picture>
+                        <div aria-live="polite" class="slick slick-list draggable" >
+                            <div id="slick-customers-first" class="slick-customers slick-track"  role="listbox">
 
-                        </div><div class="slick__slide slide slide--2 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide22">    <picture>
+                                <div class="slick__slide slide slide--1 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide21">
+                                    <picture>
+                                        <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="src/img/kubsu.jpeg" alt="japantravel.ru" typeof="foaf:Image">
+                                    </picture>
+                                </div>
+
+                                <div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">
+                                    <picture>
+                                        <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ciel parfum" typeof="foaf:Image">
+                                    </picture>
+                                </div>
+
+                                <div class="slick__slide slide slide--2 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide22">    <picture>
                             <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
 
                         </picture>
@@ -1004,22 +1034,22 @@
 
                         </picture>
 
-                        </div><div class="slick__slide slide slide--0 slick-slide slick-cloned" data-slick-index="12" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                        </div><div class="slick__slide slide slide--0 slick-slide slick-cloned" data-slick-index="12"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
                             <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://andreyparabellum.ru " typeof="foaf:Image">
 
                         </picture>
 
-                        </div><div class="slick__slide slide slide--1 slick-slide slick-cloned" data-slick-index="13" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                        </div><div class="slick__slide slide slide--1 slick-slide slick-cloned" data-slick-index="13"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
                             <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ciel parfum" typeof="foaf:Image">
 
                         </picture>
 
-                        </div><div class="slick__slide slide slide--2 slick-slide slick-cloned" data-slick-index="14" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                        </div><div class="slick__slide slide slide--2 slick-slide slick-cloned" data-slick-index="14"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
                             <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
 
                         </picture>
 
-                        </div><div class="slick__slide slide slide--3 slick-slide slick-cloned" data-slick-index="15" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                        </div><div class="slick__slide slide slide--3 slick-slide slick-cloned" data-slick-index="15"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
                             <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="arsa.su" typeof="foaf:Image">
 
                         </picture>
@@ -1036,109 +1066,107 @@
 
             </div>
 
-            <div class="attachment attachment-after">
-                <div class="views-element-container form-group"><div class="view view-our-clients view-id-our_clients view-display-id-attachment_1 js-view-dom-id-4e689a74608acb3cdf6341fdca9a82e73079234ef8fe646841fc8f294136d649">
+            <div class="view-content">
 
+                <div  class="slick" data-blazy="" data-once="blazy slick">
 
+                    <div aria-live="polite" class="slick slick-list draggable" style="padding: 0px 10%;">
+                        <div id="slick-customers-second" class="slick-customers slick-track" style="transform: scaleX(130%)" role="listbox">
 
-                    <div class="view-content">
-
-                        <div class="slick blazy slick--view slick--view--our-clients slick--view--our-clients--attachment-1 slick--view--our-clients-attachment-attachment-1 slick--optionset--our-clients-logo slick--multiple-view is-blazy slick--initialized" data-blazy="" data-once="blazy slick">
-                            <div id="slick-ab3b24ee2a7" data-slick="{&quot;count&quot;:12,&quot;total&quot;:12,&quot;mobileFirst&quot;:false,&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:false,&quot;arrows&quot;:false,&quot;centerPadding&quot;:&quot;10%&quot;,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;slidesToShow&quot;:5,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1024,&quot;settings&quot;:{&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:false,&quot;arrows&quot;:false,&quot;centerPadding&quot;:&quot;10%&quot;,&quot;slidesToShow&quot;:3,&quot;waitForAnimate&quot;:false}},{&quot;breakpoint&quot;:600,&quot;settings&quot;:{&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:false,&quot;arrows&quot;:false,&quot;centerPadding&quot;:&quot;10%&quot;,&quot;slidesToShow&quot;:2,&quot;waitForAnimate&quot;:false}}]}" class="slick__slider slick-initialized slick-slider">
-
-                                <div aria-live="polite" class="slick-list draggable" style="padding: 0px 10%;"><div class="slick-track" style="opacity: 1; width: 7680px; transform: translate3d(-3200px, 0px, 0px);" role="listbox"><div class="slick__slide slide slide--6 slick-slide slick-cloned" data-slick-index="-6" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <div class="slick__slide slide slide--1 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide21">
+                                <picture>
                                     <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="src/img/kubsu.jpeg" alt="japantravel.ru" typeof="foaf:Image">
                                 </picture>
+                            </div>
 
-                                </div><div class="slick__slide slide slide--1 slick-slide" data-slick-index="1" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide21">    <picture>
+                            <div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">
+                                <picture>
                                     <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ciel parfum" typeof="foaf:Image">
                                 </picture>
-
-                                </div><div class="slick__slide slide slide--2 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide22">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="arsa.su" typeof="foaf:Image">
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--4 slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide24">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="vekas-automation.ru" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--5 slick-slide slick-active" data-slick-index="5" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide25">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="megafurs.com" typeof="foaf:Image">
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--6 slick-slide slick-current slick-active slick-center" data-slick-index="6" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide26">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="japantravel.ru" typeof="foaf:Image">
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--7 slick-slide slick-active" data-slick-index="7" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide27">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="confirent.ru" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--8 slick-slide slick-active" data-slick-index="8" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide28">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="urheiluperhe.com" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--9 slick-slide" data-slick-index="9" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide29">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ayurvedadom.com" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--10 slick-slide" data-slick-index="10" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide210">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="angel-estate.ru" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--11 slick-slide" data-slick-index="11" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide211">    <picture>
-                                  <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://artzacepka.ru/" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--0 slick-slide slick-cloned" data-slick-index="12" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
-                                  <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://andreyparabellum.ru " typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--1 slick-slide slick-cloned" data-slick-index="13" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
-                                   <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ciel parfum" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--2 slick-slide slick-cloned" data-slick-index="14" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
-
-                                </picture>
-
-                                </div><div class="slick__slide slide slide--3 slick-slide slick-cloned" data-slick-index="15" id="" aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
-                                    <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="arsa.su" typeof="foaf:Image">
-
-                                </picture>
-                                </div></div></div>
                             </div>
-                            <nav role="navigation" class="slick__arrow">
-                                <div class="slick__arrow-wrapper">
-                                    <button type="button" data-role="none" class="slick-prev visually-hidden" aria-label="Previous" tabindex="0">Previous</button>
-                                    <span class="slick-slide-num"></span>
-                                    <button type="button" data-role="none" class="slick-next visually-hidden" aria-label="Next" tabindex="0">Next</button>
-                                </div>
-                            </nav>
-                        </div>
+
+                            <div class="slick__slide slide slide--2 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide22">    <picture>
+                                <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
+
+                            </picture>
+
+                            </div><div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="arsa.su" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--4 slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide24">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="vekas-automation.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--5 slick-slide slick-active" data-slick-index="5" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide25">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="megafurs.com" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--6 slick-slide slick-current slick-active slick-center" data-slick-index="6" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide26">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="japantravel.ru" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--7 slick-slide slick-active" data-slick-index="7" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide27">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="confirent.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--8 slick-slide slick-active" data-slick-index="8" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide28">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="urheiluperhe.com" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--9 slick-slide" data-slick-index="9" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide29">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ayurvedadom.com" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--10 slick-slide" data-slick-index="10" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide210">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="angel-estate.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--11 slick-slide" data-slick-index="11" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide211">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://artzacepka.ru/" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--0 slick-slide slick-cloned" data-slick-index="12"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://andreyparabellum.ru " typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--1 slick-slide slick-cloned" data-slick-index="13"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ciel parfum" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--2 slick-slide slick-cloned" data-slick-index="14"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--3 slick-slide slick-cloned" data-slick-index="15"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="arsa.su" typeof="foaf:Image">
+
+                        </picture>
+                        </div></div></div>
+                </div>
+                <nav role="navigation" class="slick__arrow">
+                    <div class="slick__arrow-wrapper">
+                        <button type="button" data-role="none" class="slick-prev visually-hidden" aria-label="Previous" tabindex="0">Previous</button>
+                        <span class="slick-slide-num"></span>
+                        <button type="button" data-role="none" class="slick-next visually-hidden" aria-label="Next" tabindex="0">Next</button>
                     </div>
-                </div>
-                </div>
+                </nav>
             </div>
+
         </div>
-        </div>
+
 
 </section>
-<section id="block-faq" class="dc-section faq-block block block-block-content block-block-contentb9e0b1b8-f0ab-4ad3-8793-684b8758f048 clearfix">
+<section id="block-faq" class="dc-section faq-block block block-block-content clearfix">
 
     <h2 class="block-title faq-title">FAQ</h2>
 
@@ -1299,7 +1327,7 @@
 
                     <div class="col-md-6 col-xs-12 col-sm-6">
 
-                        <div class="field form-container"><form class="contact-message-order-support-form contact-message-form contact-form" action="/" method="post">
+                        <div class="field form-container"><form class="contact-form">
                             <div class="   form-group  ">      <div class="form-item form-type-textfield form-group">
                                 <label for="field-name-value" class="control-label">Ваше имя</label>
 
@@ -1331,7 +1359,7 @@
 
                             </div>
                             <input autocomplete="off"  type="hidden"><input type="hidden" name="form_id"><div class="form-type-checkbox checkbox">
-                            <label for="agreement" class="control-label option form-required"><input required="required" class="form-checkbox required" type="checkbox" id="agreement" name="agreement" value="1" aria-required="true"><span class="custom-checkbox"></span>Отправляя заявку, я даю согласие на <a href="/privacy-policy" target="_blank" rel="nofollow">обработку персональных данных.*</a>.</label>
+                            <label for="agreement" class="control-label option form-required"><input required="required" class="form-checkbox required" type="checkbox" id="agreement" name="agreement" value="1" aria-required="true">Отправляя заявку, я даю согласие на <a href="/privacy-policy" target="_blank" rel="nofollow">обработку персональных данных.*</a>.</label>
                         </div>
                             <div  class="form-group" id="edit-actions"><button class="btn" type="submit" id="edit-submit" name="op" value="Contact Us">Свяжитесь с нами</button></div>
                         </form>

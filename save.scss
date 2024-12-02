@@ -631,7 +631,6 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/src/img/drupal-coder.svg ") no-repeat left top;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 10;
   }
@@ -1312,6 +1311,10 @@ footer {
   }
   .slick-review-counter{
     font-family: Monospaced, sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    vertical-align: middle;
+    color: black;
   }
   .view-content {
     width: 980px;
@@ -1409,17 +1412,17 @@ footer {
     outline: none;
 
     &.slick-prev {
-      background: url("/src/arrow-left.svg") no-repeat center;
+      background: url("src/arrow-left.svg") no-repeat center;
       background-size: contain;
     }
 
     &.slick-next {
-      background: url("/src/arrow-right.svg") no-repeat center;
+      background: url("src/arrow-right.svg") no-repeat center;
       background-size: contain;
     }
   }
 
-  .slick-slide-num {
+  .slick-review-total{
     display: inline-block;
     margin: 0 46px;
     font-size: 28px;
@@ -2153,4 +2156,7 @@ a, button {
   text-align: center;
   font-size: 48px;
   font-weight: 400;
+}
+#slick-customers-first{
+  transform: scaleX(130%) translateX(-125px);
 }

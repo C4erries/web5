@@ -1,0 +1,223 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0px;
+
+}
+header{
+    background-color: #00000a;
+    bottom: 0px;
+    width: 100%;
+    height: 9%;
+}
+.navbar{
+    overflow: hidden;
+    z-index: 100;
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    width: 100%;
+    height: 85%;
+    margin: 0;
+    bottom: 0px;
+}
+
+.drup-logo{
+    width: 45%;
+    display: inline-block;
+}
+.mobile-nav{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+.navbar-toggle{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    margin-left: auto;
+    width: 13%;
+}
+
+.buttonlines{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.nav-button-line{
+    background-color: #888;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 13%;
+    width: 80%;
+    padding: 3%;
+}
+
+.navmenu{
+    display:flex;
+    flex-direction: column;
+    background-color: #00000a;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+}
+.navMenuOpened{
+    height: 91%;
+    background-color: #00000a;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(116, 116, 116);
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+
+.menuline{
+    display: flex;
+    order: 1;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+.menulinewrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.innermenuline{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.menulink{
+    text-decoration: none;
+    color: white;
+    order: 1;
+    font-size: smaller;
+}
+
+.triangle{
+    display: flex;
+    order: 2;
+    width: 0px;
+    height: 0px;
+    margin-top: 7px;
+    margin-left: 5px;
+    border: solid transparent;
+    border-width: 5px;
+    border-top: solid white;
+    border-top-width: 6px;
+}
+
+
+@media screen and (min-width: 768px) {
+    header{
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 0px;
+        height: 100px;
+    }
+    .navbar{
+        flex-direction: row;
+        position: absolute;
+        width: 75%;
+        height: 100px;
+        top: 0px;
+    }
+    
+    .drup-logo{
+        width: 300px;
+    }
+    
+    .navbar-toggle{
+        display: none;
+    }
+    
+    .navmenu{
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0);
+        margin-left: 0;
+        padding: 0;
+    }
+    .mobile-nav{
+        background-color: rgba(0,0,0,0);
+    }
+    .menuline{
+        height: auto;
+        margin-left: 2%;
+        margin-top: 3%;
+    }
+
+    .menuline:hover .innermenu{
+        display: flex;
+    }
+    
+    .innermenu{
+        display: none;
+        position: absolute;
+        margin-top: 21px;
+        flex-direction: column;
+        padding-inline-start: 20px; 
+        background-color: #f14e3b;
+    }
+    
+    .menulinewrapper{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .innermenuline{
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-left: -20px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+    }
+
+    .innermenuline:hover{
+        text-decoration: none;
+        background-color: #c43c2d;
+        transition: 0.5s;
+    }
+
+    .menulink{
+        margin-top: 4px;
+        border-bottom: solid;
+        border-bottom-color: rgba(0, 0, 0, 0);
+    }
+
+    .menulink:hover{
+        border-bottom-color: #f14e3b;
+        transition: 0.2s;
+    }
+
+    .innermenulink:hover{
+        border-bottom-color: rgba(0, 0, 0, 0);
+    }
+
+    .triangle{
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+}
